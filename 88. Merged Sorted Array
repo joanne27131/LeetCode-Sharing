@@ -1,0 +1,9 @@
+class Solution(object):
+    def merge(self, nums1, m, nums2, n):
+        for i in nums2:
+            nums1.append(i)
+        a = nums1.count(0)
+        if len(nums1)>(m+n):
+            for j in range(len(nums1)-(m+n)):
+                nums1.remove(0)
+        return nums1.sort()
